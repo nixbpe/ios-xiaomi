@@ -85,7 +85,7 @@
        }
    ```
 
-6. ทำการ imeplement ฟังก์ชันที่จำเป็นสำหรับการอ่านข้อมูลการนับก้าวจาก Mi Band 3
+6. ทำการ imeplement ฟังก์ชันที่จำเป็นสำหรับการอ่านข้อมูลการนับก้าวจาก Mi Band 3 โดยค่ากานับก้าวจะถูกเรียก callback จาก `func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?)`
 
    ```swift
        public func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
@@ -113,6 +113,9 @@
            }
        }
    
+       /**
+        * ฟังก์ชัน callback เมื่อมีการอัพเดตค่าการนับก้าวจาก Mi Band 3
+        */
        func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
            let steps = parseStepsFromData(data: characteristic.value!);
            txtView.text? = String(steps)
