@@ -1,4 +1,4 @@
-`ตัวอย่างทั้งหมดดูในจากไฟล์ example.swift`
+`ตัวอย่างทั้งหมดดูในจากไฟล์ ViewController.swift`
 
 # การเชื่อมต่อ Mi Band 3 เพื่อเรียกค่านับก้าวผ่าน BLE บน iOS โดยใช้ CoreBluetooth
 
