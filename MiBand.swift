@@ -14,8 +14,6 @@ class MiBand: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
     var characteristic: CBCharacteristic!
     var steps = -1
 
-    let alert = UIAlertController(title: "DEBUG MIBAND", message: "This is an alert.", preferredStyle: .alert)
-
     let MI_SERVICE_UUID = CBUUID.init(string: "0000fee0")
     let MI_CHARACTERISTIC_COUNT_STEPS_UUID = CBUUID.init(string: "00000007-0000-3512-2118-0009AF100700")
 
